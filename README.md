@@ -13,12 +13,10 @@
 
 ## 🙋‍♂️ About Me
 
-- 🔭 Currently working on a **Super Resolution Model** (AI/ML)
 - ☁️ Specializing in **Cloud-Native Architecture** across AWS, Azure & GCP
 - 👯 Looking to collaborate on **Cloud-Native & Open Source Projects**
-- 🤝 Seeking help & discussions around **Machine Learning**
+- 🤝 Seeking help & discussions around **Machine Learning & DevOps**
 - 💬 Ask me anything about **Cloud Infrastructure, DevOps & AI**
-- 📍 Based in **India**
 
 ---
 
