@@ -1,33 +1,44 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e14,100:1a2332&height=200&section=header&text=Vinit%20Soni&fontSize=52&fontColor=4fd8c4&fontAlignY=38&desc=Cloud%20%26%20DevOps%20Engineer%20%7C%20Web%20Developer%20%7C%20Fresher&descSize=16&descAlignY=58&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e14,100:1a2332&height=200&section=header&text=Vinit%20Soni&fontSize=52&fontColor=4fd8c4&fontAlignY=35&desc=Cloud%20%26%20DevOps%20Engineer%20%7C%20Systems%20%2B%20Infrastructure&descSize=15&descAlignY=55&animation=fadeIn" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=17&duration=2600&pause=800&color=4FD8C4&center=true&vCenter=true&width=600&lines=class%3A+DevOps+%2B+Cloud+Engineer;grinding%3A+Linux+%C2%B7+Docker+%C2%B7+K8s+%C2%B7+Terraform;current+quest%3A+ship+production-grade+infra" alt="Typing SVG" />
+
+<br/>
 
 <a href="https://www.linkedin.com/in/vinit-soni-3410a2281/"><img src="https://img.shields.io/badge/LinkedIn-0a0e14?style=for-the-badge&logo=linkedin&logoColor=4fd8c4" /></a>
 <a href="https://github.com/vinitsoni03"><img src="https://img.shields.io/badge/GitHub-0a0e14?style=for-the-badge&logo=github&logoColor=4fd8c4" /></a>
 <img src="https://komarev.com/ghpvc/?username=vinitsoni03&style=for-the-badge&color=0a0e14&label=PROFILE+VIEWS" />
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=4FD8C4&center=true&vCenter=true&width=560&lines=%24+whoami;cloud+%2B+devops+%2B+web+enthusiast;%24+status+--check;building+scalable+systems...+done" alt="Typing SVG" />
-
 </div>
 
 <br/>
 
-## // about
+## // player card
 
-I'm a **student and fresher** building a career at the intersection of **cloud infrastructure, DevOps, and web development**. I care about understanding systems end-to-end — how something goes from code, to container, to a running deployment.
+| | |
+|---|---|
+| **Name** | Vinit Soni |
+| **Class** | DevOps &amp; Cloud Engineer |
+| **Focus** | Infrastructure automation · Containers · CI/CD · Cloud |
+| **Status** | `open to work` — entry-level DevOps / Cloud roles |
+| **Current arc** | Turning tool knowledge into shipped, production-shaped projects |
 
-Alongside coursework, I've completed a full hands-on DevOps program covering **containerization, CI/CD pipelines, and cloud deployment workflows**, and I'm currently working toward the AWS Solutions Architect and GCP Professional Cloud Architect certifications.
-
-- Focused on **Cloud, DevOps, and Web Systems**
-- Open to collaborating on **cloud-native and open-source projects**
-- Actively looking for **entry-level DevOps / Web Development roles**
-- Reach me on [LinkedIn](https://www.linkedin.com/in/vinit-soni-3410a2281/)
+I build and automate infrastructure end-to-end — from writing the app, to containerizing it, to standing up the pipeline that deploys and monitors it. Comfortable across the DevOps toolchain (Linux, Docker, Kubernetes, Jenkins, Terraform, Ansible) and cloud platforms (AWS, Azure, GCP), backed by a strong grounding in networking and data structures &amp; algorithms.
 
 <br/>
 
-## // certifications
+## // skill tree
+
+<div align="center">
+<img src="./assets/skill-tree.svg" width="100%" alt="Skill tree" />
+</div>
+
+<sub>Bars reflect hands-on comfort, not a certification claim — always leveling up.</sub>
+
+<br/>
+
+## // achievements unlocked
 
 <table>
 <tr>
@@ -42,13 +53,26 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 </tr>
 </table>
 
+<sub>In progress: AWS Solutions Architect · GCP Professional Cloud Architect</sub>
+
 <br/>
 
-## // stack
+## // tech loadout
 
 <table>
 <tr>
 <td valign="top" width="50%">
+
+**Infra &amp; Automation**
+<br/>
+<img src="https://img.shields.io/badge/Linux-0a0e14?style=flat-square&logo=linux&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Docker-0a0e14?style=flat-square&logo=docker&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Kubernetes-0a0e14?style=flat-square&logo=kubernetes&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Jenkins-0a0e14?style=flat-square&logo=jenkins&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Terraform-0a0e14?style=flat-square&logo=terraform&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Ansible-0a0e14?style=flat-square&logo=ansible&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/Git-0a0e14?style=flat-square&logo=git&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-0a0e14?style=flat-square&logo=githubactions&logoColor=4fd8c4" />
 
 **Cloud**
 <br/>
@@ -56,18 +80,6 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 <img src="https://img.shields.io/badge/Azure-0a0e14?style=flat-square&logo=microsoftazure&logoColor=4fd8c4" />
 <img src="https://img.shields.io/badge/GCP-0a0e14?style=flat-square&logo=googlecloud&logoColor=4fd8c4" />
 <img src="https://img.shields.io/badge/Oracle%20Cloud-0a0e14?style=flat-square&logo=oracle&logoColor=4fd8c4" />
-
-**DevOps & Tools**
-<br/>
-<img src="https://img.shields.io/badge/Docker-0a0e14?style=flat-square&logo=docker&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/Linux-0a0e14?style=flat-square&logo=linux&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/Git-0a0e14?style=flat-square&logo=git&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/GitHub%20Actions-0a0e14?style=flat-square&logo=githubactions&logoColor=4fd8c4" />
-
-**Databases**
-<br/>
-<img src="https://img.shields.io/badge/MySQL-0a0e14?style=flat-square&logo=mysql&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/MongoDB-0a0e14?style=flat-square&logo=mongodb&logoColor=4fd8c4" />
 
 </td>
 <td valign="top" width="50%">
@@ -79,13 +91,12 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 <img src="https://img.shields.io/badge/JavaScript-0a0e14?style=flat-square&logo=javascript&logoColor=4fd8c4" />
 <img src="https://img.shields.io/badge/C%2B%2B-0a0e14?style=flat-square&logo=cplusplus&logoColor=4fd8c4" />
 
-**Web & Frontend**
+**Web &amp; Data**
 <br/>
-<img src="https://img.shields.io/badge/HTML5-0a0e14?style=flat-square&logo=html5&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/CSS3-0a0e14?style=flat-square&logo=css3&logoColor=4fd8c4" />
 <img src="https://img.shields.io/badge/React-0a0e14?style=flat-square&logo=react&logoColor=4fd8c4" />
 <img src="https://img.shields.io/badge/Tailwind-0a0e14?style=flat-square&logo=tailwindcss&logoColor=4fd8c4" />
-<img src="https://img.shields.io/badge/Figma-0a0e14?style=flat-square&logo=figma&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/MySQL-0a0e14?style=flat-square&logo=mysql&logoColor=4fd8c4" />
+<img src="https://img.shields.io/badge/MongoDB-0a0e14?style=flat-square&logo=mongodb&logoColor=4fd8c4" />
 
 </td>
 </tr>
@@ -93,20 +104,20 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 
 <br/>
 
-## // deployments
+## // quest log
 
 <table>
 <tr>
 <td width="50%">
 
-**[SwiftSnip](https://github.com/vinitsoni03/SwiftSnip)**
-<br/>Smart, modern pastebin-style platform for developers to create, manage, and share code snippets.
+**[SwiftSnip](https://github.com/vinitsoni03/SwiftSnip)** `CLEARED`
+<br/>Smart pastebin-style platform for developers to create, manage, and share code snippets.
 <br/><sub>React · Tailwind · Supabase · TypeScript</sub>
 
 </td>
 <td width="50%">
 
-**[FedStrokeSeizure-IoMT](https://github.com/vinitsoni03/FedStrokeSeizure-IoMT)**
+**[FedStrokeSeizure-IoMT](https://github.com/vinitsoni03/FedStrokeSeizure-IoMT)** `CLEARED`
 <br/>Federated-learning system for stroke and seizure detection over IoMT devices.
 <br/><sub>Python · Federated Learning</sub>
 
@@ -115,15 +126,15 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 <tr>
 <td width="50%">
 
-**[Realtime Streaming Pipeline](https://github.com/vinitsoni03/realtime-streaming-pipeline)**
-<br/>Real-time data streaming pipeline for low-latency data ingestion and processing.
+**[Realtime Streaming Pipeline](https://github.com/vinitsoni03/realtime-streaming-pipeline)** `CLEARED`
+<br/>Real-time data streaming pipeline for low-latency ingestion and processing.
 <br/><sub>Python · Data Engineering</sub>
 
 </td>
 <td width="50%">
 
-**[Cloud File Storage](https://github.com/vinitsoni03/Cloud-file-storage)**
-<br/>Cloud-backed file storage system for uploading, organizing, and retrieving files remotely.
+**[Cloud File Storage](https://github.com/vinitsoni03/Cloud-file-storage)** `CLEARED`
+<br/>Cloud-backed file storage system for uploading, organizing, and retrieving files.
 <br/><sub>Python · Cloud Storage</sub>
 
 </td>
@@ -131,14 +142,14 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 <tr>
 <td width="50%">
 
-**[AI Image Recognition](https://github.com/vinitsoni03/AI-image-recognition)**
-<br/>Image recognition system exploring practical computer vision and model deployment.
+**[AI Image Recognition](https://github.com/vinitsoni03/AI-image-recognition)** `CLEARED`
+<br/>Computer vision system exploring practical image recognition and model deployment.
 <br/><sub>Python · Computer Vision</sub>
 
 </td>
 <td width="50%">
 
-**[Skill Barter](https://github.com/vinitsoni03/Skill-Barter)**
+**[Skill Barter](https://github.com/vinitsoni03/Skill-Barter)** `CLEARED`
 <br/>Platform to trade skills with others instead of paying — learn by teaching.
 <br/><sub>JavaScript</sub>
 
@@ -164,10 +175,8 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 ## // activity
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/vinitsoni03/vinitsoni03/output/github-contribution-grid-snake-dark.svg" width="100%" />
+<img src="https://raw.githubusercontent.com/vinitsoni03/vinitsoni03/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake animation" />
 </div>
-
-> The activity graph above animates automatically once the snake workflow below runs on GitHub Actions — see setup note at the bottom.
 
 <br/>
 
@@ -179,7 +188,6 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 <a href="https://github.com/vinitsoni03"><img src="https://img.shields.io/badge/GitHub-0a0e14?style=for-the-badge&logo=github&logoColor=4fd8c4" /></a>
 
 <br/><br/>
-
 <sub>status: open to work</sub>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a2332,100:0a0e14&height=100&section=footer" width="100%"/>
