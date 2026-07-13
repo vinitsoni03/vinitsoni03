@@ -157,7 +157,6 @@ Alongside coursework, I've completed a full hands-on DevOps program covering **c
 
 <div align="center">
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinitsoni03&layout=compact&theme=dark&bg_color=0a0e14&title_color=4fd8c4&text_color=8892a0&border_color=1a2332&hide_border=false" width="48%" />
-<img src="https://github-profile-trophy.vercel.app/?username=vinitsoni03&theme=darkhub&no-frame=true&column=3&margin-w=8&margin-h=8" width="48%" />
 </div>
 
 <br/>
