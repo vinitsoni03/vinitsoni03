@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="320" viewBox="0 0 840 320" role="img" aria-label="Skill tree">
+<style>.h{font:700 13px 'JetBrains Mono', Consolas, 'Courier New', monospace;fill:#4fd8c4;letter-spacing:2px}.n{font:400 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#c9d1d9}.p{font:400 12px 'JetBrains Mono', Consolas, 'Courier New', monospace;fill:#8892a0}.f{transform-box:fill-box;transform-origin:left;transform:scaleX(0);animation:g 1s cubic-bezier(.2,.8,.2,1) forwards}@keyframes g{to{transform:scaleX(1)}}</style>
+<rect x="0.5" y="0.5" width="839" height="319" rx="8" fill="#0a0e14" stroke="#1a2332"/>
+<text x="30" y="42" class="h">INFRA &amp; AUTOMATION</text>
+<line x1="30" y1="52" x2="410" y2="52" stroke="#1a2332"/>
+<text x="30" y="88" class="n">Linux</text><text x="410" y="88" class="p" text-anchor="end">LV 8</text>
+<rect x="30" y="97" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:0ms" x="30" y="97" width="304" height="6" rx="3" fill="#4fd8c4"/>
+<text x="30" y="134" class="n">Docker</text><text x="410" y="134" class="p" text-anchor="end">LV 7</text>
+<rect x="30" y="143" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:90ms" x="30" y="143" width="285" height="6" rx="3" fill="#4fd8c4"/>
+<text x="30" y="180" class="n">Kubernetes</text><text x="410" y="180" class="p" text-anchor="end">LV 6</text>
+<rect x="30" y="189" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:180ms" x="30" y="189" width="228" height="6" rx="3" fill="#4fd8c4"/>
+<text x="30" y="226" class="n">CI/CD · Jenkins · Actions</text><text x="410" y="226" class="p" text-anchor="end">LV 7</text>
+<rect x="30" y="235" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:270ms" x="30" y="235" width="266" height="6" rx="3" fill="#4fd8c4"/>
+<text x="30" y="272" class="n">Terraform · Ansible</text><text x="410" y="272" class="p" text-anchor="end">LV 6</text>
+<rect x="30" y="281" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:360ms" x="30" y="281" width="228" height="6" rx="3" fill="#4fd8c4"/>
+<text x="440" y="42" class="h">CLOUD &amp; CODE</text>
+<line x1="440" y1="52" x2="820" y2="52" stroke="#1a2332"/>
+<text x="440" y="88" class="n">AWS</text><text x="820" y="88" class="p" text-anchor="end">LV 7</text>
+<rect x="440" y="97" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:450ms" x="440" y="97" width="266" height="6" rx="3" fill="#4fd8c4"/>
+<text x="440" y="134" class="n">Azure</text><text x="820" y="134" class="p" text-anchor="end">LV 6</text>
+<rect x="440" y="143" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:540ms" x="440" y="143" width="228" height="6" rx="3" fill="#4fd8c4"/>
+<text x="440" y="180" class="n">GCP</text><text x="820" y="180" class="p" text-anchor="end">LV 5</text>
+<rect x="440" y="189" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:630ms" x="440" y="189" width="190" height="6" rx="3" fill="#4fd8c4"/>
+<text x="440" y="226" class="n">Python</text><text x="820" y="226" class="p" text-anchor="end">LV 7</text>
+<rect x="440" y="235" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:720ms" x="440" y="235" width="285" height="6" rx="3" fill="#4fd8c4"/>
+<text x="440" y="272" class="n">Networking</text><text x="820" y="272" class="p" text-anchor="end">LV 6</text>
+<rect x="440" y="281" width="380" height="6" rx="3" fill="#1a2332"/>
+<rect class="f" style="animation-delay:810ms" x="440" y="281" width="247" height="6" rx="3" fill="#4fd8c4"/>
+</svg>
