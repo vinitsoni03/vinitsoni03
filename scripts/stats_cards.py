@@ -10,6 +10,7 @@ Env:    GITHUB_TOKEN (required), GH_USER (default: vinitsoni03)
 Only public, non-fork repositories are counted, whatever the token can see.
 """
 
+import base64
 import json
 import os
 import sys
@@ -19,10 +20,17 @@ from html import escape
 USER = os.environ.get("GH_USER", "vinitsoni03")
 TOKEN = os.environ["GITHUB_TOKEN"]
 
-# Theme, matching the rest of the README
-BG, BORDER, ACCENT, TEXT, MUTED = "#0a0e14", "#1a2332", "#4fd8c4", "#8892a0", "#4d5765"
-LANG_COLORS = ["#4fd8c4", "#e8a33d", "#7aa2f7", "#f7768e", "#9ece6a", "#bb9af7"]
-FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
+# Theme: the portfolio's (black, off-white ink, amber), same as scripts/build_assets.py
+BG, BORDER, ACCENT, TEXT, MUTED = "#070707", "#2a2a2a", "#f2f2ef", "#91918f", "#4a4a48"
+LANG_COLORS = ["#e8a33d", "#f2e4c8", "#c46a1c", "#91918f", "#8a4a16", "#4a4a48"]
+FONT = "G, Geist, Inter, 'Segoe UI', system-ui, sans-serif"
+# Geist subset written by build_assets.py; embedded so the cards match the other panels
+_FONT_FILE = os.path.join(os.path.dirname(__file__), "..", "assets", "fonts", "geist-subset.woff2")
+FONT_FACE = (
+    "@font-face { font-family: G; font-weight: 100 900; src: url(data:font/woff2;base64,"
+    + base64.b64encode(open(_FONT_FILE, "rb").read()).decode() + ') format("woff2"); }'
+    if os.path.exists(_FONT_FILE) else ""
+)
 
 QUERY = """
 query($login: String!, $after: String) {
@@ -31,8 +39,10 @@ query($login: String!, $after: String) {
     contributionsCollection {
       totalCommitContributions
       restrictedContributionsCount
-      totalPullRequestContributions
-      totalIssueContributions
+      contributionCalendar {
+        totalContributions
+        weeks { contributionDays { contributionCount } }
+      }
     }
     repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) { totalCount }
     repositories(first: 100, after: $after, ownerAffiliations: OWNER,
@@ -80,29 +90,35 @@ def fetch():
             break
         after = repos["pageInfo"]["endCursor"]
     cc = first["contributionsCollection"]
+    cal = cc["contributionCalendar"]
+    active = sum(1 for w in cal["weeks"] for d in w["contributionDays"] if d["contributionCount"])
     stats = [
-        ("Total stars", stars),
+        ("Contributions (last year)", cal["totalContributions"]),
         ("Commits (last year)", cc["totalCommitContributions"] + cc["restrictedContributionsCount"]),
-        ("Pull requests", cc["totalPullRequestContributions"]),
-        ("Issues", cc["totalIssueContributions"]),
-        ("Contributed to", first["repositoriesContributedTo"]["totalCount"]),
+        ("Active days (last year)", active),
         ("Public repos", first["repositories"]["totalCount"]),
+        ("Repos contributed to", first["repositoriesContributedTo"]["totalCount"]),
+        ("Languages used", len(langs)),
     ]
+    if stars:  # only worth showing once there are some
+        stats[-1] = ("Total stars", stars)
     return stats, langs
 
 
 def frame(width, height, title, body):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
 <style>
-  .t {{ font: 600 18px {FONT}; fill: {ACCENT}; }}
+  {FONT_FACE}
+  .t {{ font: 500 15px {FONT}; fill: {ACCENT}; }}
   .l {{ font: 400 14px {FONT}; fill: {TEXT}; }}
-  .v {{ font: 700 14px {FONT}; fill: {ACCENT}; }}
+  .v {{ font: 500 14px {FONT}; fill: {ACCENT}; font-variant-numeric: tabular-nums; }}
   .s {{ font: 400 12px {FONT}; fill: {TEXT}; }}
   .row {{ opacity: 0; animation: in .5s ease-out forwards; }}
   @keyframes in {{ to {{ opacity: 1; }} }}
 </style>
-<rect x="0.5" y="0.5" rx="6" width="{width - 1}" height="{height - 1}" fill="{BG}" stroke="{BORDER}"/>
+<rect x="0.5" y="0.5" rx="10" width="{width - 1}" height="{height - 1}" fill="{BG}" stroke="{BORDER}"/>
 <text x="25" y="35" class="t">{escape(title)}</text>
+<line x1="25" y1="48" x2="{width - 25}" y2="48" stroke="#fff" stroke-opacity=".12"/>
 {body}
 </svg>
 """
@@ -110,37 +126,31 @@ def frame(width, height, title, body):
 
 def stats_card(stats):
     rows = "\n".join(
-        f'<g class="row" style="animation-delay:{150 + i * 120}ms" transform="translate(25,{68 + i * 26})">'
+        f'<g class="row" style="animation-delay:{150 + i * 120}ms" transform="translate(25,{80 + i * 26})">'
         f'<text class="l">{escape(label)}:</text>'
         f'<text x="285" class="v" text-anchor="end">{value:,}</text></g>'
         for i, (label, value) in enumerate(stats)
     )
-    return frame(335, 85 + len(stats) * 26, f"{USER}'s GitHub Stats", rows)
+    return frame(335, 97 + len(stats) * 26, "GitHub", rows)
 
 
 def langs_card(langs, top=6):
+    """One row per language (name, share, thin bar) on the same 26px rhythm as the
+    stats card, so the two sit side by side at equal height."""
     items = sorted(langs.items(), key=lambda kv: kv[1], reverse=True)[:top]
     total = sum(size for _, size in items) or 1
-    width, bar_w = 335, 285
-    # Stacked progress bar
-    x, bar = 25.0, []
-    for i, (_, size) in enumerate(items):
-        w = bar_w * size / total
-        bar.append(f'<rect x="{x:.2f}" y="52" width="{w:.2f}" height="8" fill="{LANG_COLORS[i % len(LANG_COLORS)]}"/>')
-        x += w
-    clip = f'<clipPath id="c"><rect x="25" y="52" width="{bar_w}" height="8" rx="4"/></clipPath>'
-    body = [clip, f'<g clip-path="url(#c)">{"".join(bar)}</g>']
-    # Two-column legend
+    body = []
     for i, (name, size) in enumerate(items):
-        cx, cy = 25 + (i % 2) * 150, 85 + (i // 2) * 24
+        share = size / total
         color = LANG_COLORS[i % len(LANG_COLORS)]
         body.append(
-            f'<g class="row" style="animation-delay:{150 + i * 100}ms" transform="translate({cx},{cy})">'
-            f'<circle cx="5" cy="-4" r="5" fill="{color}"/>'
-            f'<text x="16" class="s">{escape(name)} {100 * size / total:.1f}%</text></g>'
+            f'<g class="row" style="animation-delay:{150 + i * 120}ms" transform="translate(25,{80 + i * 26})">'
+            f'<text class="l">{escape(name)}</text>'
+            f'<rect x="110" y="-6" width="130" height="3" rx="1.5" fill="#fff" fill-opacity=".1"/>'
+            f'<rect x="110" y="-6" width="{max(2, 130 * share):.1f}" height="3" rx="1.5" fill="{color}"/>'
+            f'<text x="285" class="v" text-anchor="end">{100 * share:.1f}%</text></g>'
         )
-    height = 85 + ((len(items) + 1) // 2) * 24
-    return frame(width, height, "Most Used Languages", "\n".join(body))
+    return frame(335, 97 + top * 26, "Languages", "\n".join(body))
 
 
 def main():

@@ -28,7 +28,7 @@ jobs:
         with:
           github_user_name: vinitsoni03
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/snake-amber.svg?color_snake=#e8a33d&color_dots=#141414,#3a2414,#6b4518,#a8661c,#e8a33d
             dist/github-contribution-grid-snake.svg
 
       - name: Push cards to output branch
