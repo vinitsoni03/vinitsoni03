@@ -16,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Replaces github-readme-stats.vercel.app, whose public deployment is paused.
+      # Runs before snk: snk's Docker container creates dist/ as root, which blocks later writes.
+      - name: Generate stats + top-languages cards
+        run: python3 scripts/stats_cards.py dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
@@ -23,12 +30,6 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
             dist/github-contribution-grid-snake.svg
-
-      # Replaces github-readme-stats.vercel.app, whose public deployment is paused
-      - name: Generate stats + top-languages cards
-        run: python3 scripts/stats_cards.py dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push cards to output branch
         uses: crazy-max/ghaction-github-pages@v4
